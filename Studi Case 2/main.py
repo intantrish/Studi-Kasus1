@@ -2,7 +2,7 @@ import datetime
 #IMPLEMENTASI CLASS DIAGRAM PERPUSTAKAAN
 
 class Author:
-    """Representasi dari Penulis."""
+    "Representasi dari Penulis."
     
     def __init__(self, name: str, birth_year: int):
         self.name: str = name
@@ -16,7 +16,7 @@ class Author:
         return f"Penulis: {self.name}, Lahir: {self.birth_year}"
 
 class LibraryItem:
-    """Class dasar (Superclass) untuk semua item di perpustakaan."""
+    "Class dasar (Superclass) untuk semua item di perpustakaan."
     
     def __init__(self, item_id: int, title: str):
         self.item_id: int = item_id
@@ -38,7 +38,7 @@ class LibraryItem:
         return f"Item Perpustakaan: {self.title} (ID: {self.item_id})"
 
 class Book(LibraryItem):
-    """Subclass Book, mewarisi dari LibraryItem."""
+    "Subclass Book, mewarisi dari LibraryItem."
     
     def __init__(self, item_id: int, title: str, isbn: str, author: Author):
         # Memanggil konstruktor superclass
@@ -59,7 +59,7 @@ class Book(LibraryItem):
     # Metode calculate_late_fee() diwarisi dari LibraryItem
 
 class LibraryMember:
-    """Representasi Anggota Perpustakaan."""
+    "Representasi Anggota Perpustakaan."
     
     def __init__(self, member_id: int, name: str):
         self.member_id: int = member_id
